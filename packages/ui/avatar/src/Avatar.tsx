@@ -58,7 +58,7 @@ const Avatar = ({
         visible={visible}
         onClick={handleUpload}
       />
-      {text && <Text>Upload</Text>}
+      {text && !avatarPath && <Text>Upload</Text>}
       <FileInput
         type='file'
         name='file'

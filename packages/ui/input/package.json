@@ -8,6 +8,7 @@
     "react": "16.8.6"
   },
   "dependencies": {
-    "styled-system": "5.0.6"
+    "styled-system": "5.0.6",
+    "rc-animate": "^2.9.2"
   }
 }

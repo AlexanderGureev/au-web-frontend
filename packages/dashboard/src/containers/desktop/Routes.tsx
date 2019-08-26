@@ -11,7 +11,6 @@ import Profile from './Profile'
 const Routes = () => {
   const dispatch = useDispatch()
 
-  console.log(process.env.API_URL)
   useEffect(() => {
     dispatch(init())
   }, [])

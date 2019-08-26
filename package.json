@@ -7,10 +7,10 @@
     "lint": "tslint --project tsconfig.json -c tslint.json -t codeFrame backend/**/*.ts"
   },
   "devDependencies": {
-    "@types/bcrypt": "^3.0.0",
     "husky": "^2.4.1",
     "lerna": "^3.16.4",
-    "tslint": "^5.17.0"
+    "tslint": "^5.17.0",
+    "typescript": "3.5.3"
   },
   "husky": {
     "hooks": {
@@ -21,11 +21,6 @@
     "packages/**"
   ],
   "dependencies": {
-    "array-move": "^2.1.0",
-    "bcrypt": "^3.0.6",
-    "rc-animate": "^2.9.2",
-    "react-sortable-hoc": "^1.9.1",
-    "react-virtualized": "^9.21.1",
     "redux-devtools-extension": "^2.13.8"
   }
 }

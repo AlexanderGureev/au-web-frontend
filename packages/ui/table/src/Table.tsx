@@ -8,7 +8,7 @@ import {
   TableItemWrapper,
   StyledTable,
   TableWrapper,
-} from '@ui/table'
+} from './styles'
 import { Empty } from '@ui/empty'
 
 const SortableItem = SortableElement(({ value, className, style }) => (
@@ -82,7 +82,7 @@ const TableComponent = ({
 
 const SortableTable = SortableContainer(TableComponent)
 
-const Table = ({ list, intl }) => {
+export const Table = ({ list, intl }) => {
   const SortDirections = { ASC: 'ASC', DESC: 'DESC' }
 
   const [sortBy, setSortBy] = useState('id')
@@ -166,5 +166,3 @@ const Table = ({ list, intl }) => {
     </TableWrapper>
   )
 }
-
-export default Table

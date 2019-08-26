@@ -3,7 +3,7 @@ import { injectIntl, InjectedIntl } from 'react-intl'
 import { Column, Layout, Row } from '@ui/layout'
 import { Text } from '@ui/text'
 import messages from '../../messages'
-import Table from './Table'
+import { Table } from '@ui/table'
 
 interface Props {
   intl: InjectedIntl
