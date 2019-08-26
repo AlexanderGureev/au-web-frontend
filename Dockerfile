@@ -8,7 +8,7 @@ ENV API_URL=$API_URL
 RUN echo $API_URL
 
 RUN yarn
-RUN yarn workspace @frontend/dashboard build
+RUN yarn workspace @au/dashboard build
 
 
 # EXPOSE 80
@@ -16,7 +16,7 @@ RUN yarn workspace @frontend/dashboard build
 FROM nginx
 RUN rm -rf /etc/nginx/conf.d
 COPY conf /etc/nginx
-COPY --from=builder /usr/src/app/frontend/dashboard/dist /usr/share/nginx/html
+COPY --from=builder /usr/src/app/packages/dashboard/dist /usr/share/nginx/html
 
 CMD sed -i -e 's/$PORT/'"$PORT"'/g' /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'
 
@@ -25,5 +25,5 @@ CMD sed -i -e 's/$PORT/'"$PORT"'/g' /etc/nginx/conf.d/default.conf && nginx -g '
 # CMD ["nginx", "-g", "daemon off;"]
 
 
-# heroku container:push web --arg API_URL=test-url --app auwebapp
-# heroku container:release web --app auwebapp
+# heroku container:push web --arg API_URL=https://au-webapp-api.herokuapp.com/graphql --app au-webapp
+# heroku container:release web --app au-webapp

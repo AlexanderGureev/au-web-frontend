@@ -11,7 +11,8 @@ import {
 import plusIcon from './img/plus.svg'
 import deleteIcon from './img/trash.svg'
 
-const API_URL = process.env.API_URL || 'http://localhost:3000'
+const API_URL_ROOT = process.env.API_URL || 'http://localhost:3000/graphql'
+const API_URL = API_URL_ROOT.split('/graphql')[0]
 
 interface AvatarProps {
   size?: number
