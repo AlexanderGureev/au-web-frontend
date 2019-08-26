@@ -1,0 +1,17 @@
+{
+  "name": "@au/users",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "src/index.ts",
+  "dependencies": {
+    "array-move": "^2.1.0",
+    "moment": "^2.24.0",
+    "react-sortable-hoc": "^1.9.1",
+    "react-virtualized": "^9.21.1",
+    "recompose": "^0.30.0"
+  },
+  "peerDependencies": {
+    "react": "16.8.6",
+    "react-router-dom": "5.0.0"
+  }
+}
